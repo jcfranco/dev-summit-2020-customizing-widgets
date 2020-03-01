@@ -1,0 +1,47 @@
+{
+  "name": "dev-summit-2020-customizing-widgets",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "tsc",
+    "prettify": "prettier --write \"demos/**/*.{css,html,ts,tsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcfranco/dev-summit-2020-customizing-widgets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcfranco/dev-summit-2020-customizing-widgets/issues"
+  },
+  "homepage": "https://github.com/jcfranco/dev-summit-2020-customizing-widgets#readme",
+  "dependencies": {
+    "esri-reveal.js-templates": "git+https://github.com/esri/reveal.js.git#153be4b866aa342b2ffe9a6c9401341bdb4ccd54"
+  },
+  "devDependencies": {
+    "@types/arcgis-js-api": "4.8.0",
+    "dojo-typings": "^1.11.7",
+    "grunt": "^1.0.3",
+    "grunt-sass": "^2.0.0",
+    "prettier": "1.16.4",
+    "typescript": "^2.9.2"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false,
+    "overrides": [
+      {
+        "files": "*.tsx",
+        "options": {
+          "printWidth": 100
+        }
+      }
+    ]
+  }
+}
