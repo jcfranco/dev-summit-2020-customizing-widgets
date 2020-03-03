@@ -11,9 +11,7 @@
 
 # Agenda
 
-![widget things](img/widget-things.png)
-
-**Warning:** Stranger Things ahead...
+TODO: THEME
 
 ---
 
@@ -45,9 +43,7 @@
 
 ---
 
-![continue](./img/8bit/8-BIT-continue.png)
-
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+TODO: THEME CONTINUE
 
 ---
 
@@ -55,11 +51,11 @@
 
 <h1>Act I</h1>
 
-![Act 1](./img/8bit/JSAPI-8BIT_Act-Start.png)
+TODO: img
 
 <h2>Theming</h2>
 
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+<!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
@@ -83,12 +79,12 @@
 Using a theme requires only a slight update to the CSS path.
 
 ```html
-<link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/<theme-name>/main.css">
+<link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/<theme-name>/main.css" />
 ```
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
 
 **Theme Switcher**
 
@@ -191,7 +187,7 @@ Link your stylesheet in your app.
 
 ```html
 <!-- In your app: -->
-<link href="path/to/your/theme/main.css" rel="stylesheet">
+<link href="path/to/your/theme/main.css" rel="stylesheet" />
 ```
 
 ---
@@ -240,10 +236,10 @@ But wait...there's more!<!-- .element: class="fragment" data-fragment-index="1" 
 Override the core color variables...
 
 ```scss
-$font-color                       : #3a5fe5;
-$interactive-font-color           : #ff1515;
-$background-color                 : #1e0707
-$button-color                     : #ff1515;
+$font-color: #3a5fe5;
+$interactive-font-color: #ff1515;
+$background-color: #1e0707;
+$button-color: #ff1515;
 ```
 
 ...then magic!<!-- .element: class="fragment" data-fragment-index="1" -->
@@ -269,7 +265,7 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 # Act I: Lets make a theme
 
-Stranger Things Theme
+TODO: theme
 
 [![Custom Theme](./img/custom-theme.png)](../demos/custom-theme/)
 
@@ -277,7 +273,7 @@ Stranger Things Theme
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
 
 **Custom Theme**
 
@@ -299,20 +295,20 @@ Stranger Things Theme
 <!-- NEXT ACT  A -->
 <h1>End Act I</h1>
 
-![Act 1](./img/8bit/JSAPI-8bit_Act-End.png)
+TODO: img
 
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+<!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
 <!-- NEXT ACT  B -->
 <h1>Act II</h1>
 
-![Act 2](./img/8bit/JSAPI-8bit_Act-Start.png)
+TODO: img
 
 <h2>Views</h2>
 
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+<!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
@@ -394,9 +390,7 @@ API Exploration
 
 # Act II: Recreating a view
 
-Custom Stranger Things Compass
-
-[![Custom Theme](./img/custom-compass.png)](../demos/custom-compass-complete/)
+TODO: custom widget
 
 ---
 
@@ -414,7 +408,7 @@ interface CustomCompass {
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
 
 Recreating a view
 
@@ -438,9 +432,9 @@ What have we learned about Widget Views?
 <!-- NEXT ACT  A -->
 <h1>End Act II</h1>
 
-![Act 2](./img/8bit/JSAPI-8bit_Act-End.png)
+TODO: img
 
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+<!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
@@ -449,11 +443,11 @@ What have we learned about Widget Views?
 <!-- NEXT ACT  B -->
 <h1>Act III</h1>
 
-![Act 3](./img/8bit/JSAPI-8bit_Act-Start.png)
+TODO: img
 
 <h2>Extending a View</h2>
 
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+<!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
@@ -468,7 +462,7 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
 
 **CustomCompass (Revisited)**
 
@@ -482,7 +476,7 @@ What have we learned about Widget Views?
 |
 [Steps](../demos/custom-basemap-gallery-start/STEPS.md)
 
-<!-- .slide: data-background="img/demo-time.png" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
 
 ---
 
@@ -501,18 +495,18 @@ What have we learned about Widget Views?
 <!-- NEXT ACT A -->
 <h1>End Act III</h1>
 
-![Act 3](./img/8bit/JSAPI-8bit_Act-End.png)
+TODO: img
 
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+<!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
 <!-- NEXT ACT B -->
 <h1>The End?</h1>
 
-<img class="floating" src="./img/8bit/JSAPI-8bit_End.png" height="400" style="margin-left:10px; margin-right: 10px;"/>
+TODO: img
 
-<!-- .slide: data-background="img/upside-down-bg.jpg" data-background-size="cover"  -->
+<!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
@@ -552,13 +546,13 @@ What have we learned about Widget Views?
 
 ##### For example
 
-> 👓 Where's Barbara? 😭
+> todo
 
 &nbsp;
 
 > 🤔 Where can I find the slides/source?
 
-👉 [bit.ly/customwidgetsds19](http://bit.ly/customwidgetsds19) 👈
+👉 [bit.ly/todo](http://bit.ly/todo) 👈
 
 ---
 

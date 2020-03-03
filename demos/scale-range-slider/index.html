@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Basic ScaleRangeSlider</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.14/"></script>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <script>
+      require(["esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer", "esri/widgets/ScaleRangeSlider"], function(
+        Map,
+        MapView,
+        FeatureLayer,
+        ScaleRangeSlider
+      ) {
+        const map = new Map({
+          basemap: "dark-gray"
+        });
+
+        var featureLayer = new FeatureLayer({
+          url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Landscape_Trees/FeatureServer/0"
+        });
+        map.add(featureLayer);
+
+        const view = new MapView({
+          container: "viewDiv",
+          map: map,
+          zoom: 4,
+          center: [-99, 39]
+        });
+
+        const scaleRangeSlider = new ScaleRangeSlider({
+          view: view,
+          layer: featureLayer,
+          region: "us" // preview thumbnail will be of US
+        });
+        view.ui.add(scaleRangeSlider, "bottom-left");
+
+        // to update the layer min/max scale based on the slider
+        scaleRangeSlider.watch(["minScale", "maxScale"], function(value, oldValue, name) {
+          featureLayer[name] = value;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
