@@ -11,7 +11,7 @@
 
 # Agenda
 
-TODO: THEME
+<!-- TODO: THEME -->
 
 ---
 
@@ -43,15 +43,15 @@ TODO: THEME
 
 ---
 
-TODO: THEME CONTINUE
+<!-- TODO: THEME CONTINUE -->
 
 ---
 
 <!-- Presenter: Matt -->
 
-<h1>Act I</h1>
+<h1>Part I</h1>
 
-TODO: img
+<!-- TODO: img --> 
 
 <h2>Theming</h2>
 
@@ -59,7 +59,7 @@ TODO: img
 
 ---
 
-# Act I: Theming
+# Part I: Theming
 
 ## Why Theme? <!-- .element: class="fragment" data-fragment-index="0" -->
 
@@ -79,7 +79,7 @@ TODO: img
 Using a theme requires only a slight update to the CSS path.
 
 ```html
-<link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/<theme-name>/main.css" />
+<link rel="stylesheet" href="https://js.arcgis.com/<version>/esri/themes/<theme-name>/main.css">
 ```
 
 ---
@@ -244,13 +244,9 @@ $button-color: #ff1515;
 
 ...then magic!<!-- .element: class="fragment" data-fragment-index="1" -->
 
-<img src="./img/8bit/JSAPI-8bit_Magic.png" style="margin: 0;"/><!-- .element: class="fragment" data-fragment-index="1" -->
-
 ---
 
 # Magic
-
-<img src="./img/8bit/JSAPI-8bit_Magic.png" style="margin: 0;"/>
 
 Using `$button-color` we "automagically" set the hover color.
 
@@ -263,13 +259,11 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 ---
 
-# Act I: Lets make a theme
+# Part I: Lets make a theme
 
-TODO: theme
+<!-- TODO: theme -->
 
 [![Custom Theme](./img/custom-theme.png)](../demos/custom-theme/)
-
-**DISCLAIMER**: `theme has low contrast`
 
 ---
 
@@ -281,7 +275,7 @@ TODO: theme
 
 ---
 
-# Act I: Theming Recap
+# Part I: Theming Recap
 
 - Use the utility for easy theming.
 - Theme structure
@@ -292,19 +286,19 @@ TODO: theme
 
 ---
 
-<!-- NEXT ACT  A -->
-<h1>End Act I</h1>
+<!-- NEXT PART  A -->
+<h1>End Part I</h1>
 
-TODO: img
+<!-- TODO: img -->
 
 <!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
-<!-- NEXT ACT  B -->
-<h1>Act II</h1>
+<!-- NEXT PART  B -->
+<h1>Part II</h1>
 
-TODO: img
+<!-- TODO: img -->
 
 <h2>Views</h2>
 
@@ -312,7 +306,7 @@ TODO: img
 
 ---
 
-# Act II: Widget Composition
+# Part II: Widget Composition
 
 Widgets are composed of Views & ViewModels
 
@@ -325,7 +319,7 @@ Widgets are composed of Views & ViewModels
 
 ---
 
-# Act II: TypeScript
+# Part II: TypeScript
 
 - Widgets written in TypeScript (Typed JavaScript)
 - JS of the future, now <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -337,7 +331,7 @@ Widgets are composed of Views & ViewModels
 
 ---
 
-# Act II: Views
+# Part II: Views
 
 - Presentation of the Widget
 - Uses ViewModel APIs to render the UI
@@ -348,7 +342,7 @@ Widgets are composed of Views & ViewModels
 
 ---
 
-# Act II: Widget Class
+# Part II: Widget Class
 
 `esri/widgets/Widget`
 
@@ -359,7 +353,7 @@ Widgets are composed of Views & ViewModels
 
 ---
 
-# Act II: Widget Lifecycle
+# Part II: Widget Lifecycle
 
 - <!-- .element: class="fragment" data-fragment-index="1" --> `constructor`
 - <!-- .element: class="fragment" data-fragment-index="2" --> `postInitialize`
@@ -368,7 +362,7 @@ Widgets are composed of Views & ViewModels
 
 ---
 
-# Act II: `render`
+# Part II: `render`
 
 - Defines UI
 - Reacts to state
@@ -379,30 +373,30 @@ Widgets are composed of Views & ViewModels
 
 ---
 
-# Act II: Working with Views
+# Part II: Working with Views
 
 API Exploration
 
-- [Compass Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html)
-- [Compass Sample](https://developers.arcgis.com/javascript/latest/sample-code/widgets-compass-2d/index.html)
+- [ScaleRangeSlider Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html)
+- [ScaleRangeSlider Demo](https://codepen.io/jcfranco-the-scripter/pen/GRJvXPZ?editors=1001)
 
 ---
 
-# Act II: Recreating a view
+# Part II: Recreating a view
 
-TODO: custom widget
+Custom ScaleRangeSlider
+
+[![Custom ScaleRangeSlider](./img/custom-scalerangeslider.png)](../demos/custom-scalerangeslider-complete/)
 
 ---
 
-# Act II: Compass Interface
+# Part II: ScaleRangeSlider Interface
 
-CustomCompass widget: Same interface as the default Compass widget
+`CustomScaleRangeSlider` widget: Same interface as the default `ScaleRangeSlider` widget
 
 ```ts
-interface CustomCompass {
-  view: View; //MapView | SceneView
-  viewModel: CompassViewModel;
-  reset(): void; // CompassViewModel.reset()
+interface ScaleRangeSlider {
+  // tbd 🚧
 }
 ```
 
@@ -412,11 +406,11 @@ interface CustomCompass {
 
 Recreating a view
 
-[Demo Start](../demos/custom-compass-start/) | [Demo Steps](../demos/custom-compass-start/STEPS.md) | [Compass Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass.html)
+[Demo Start](../demos/custom-scalerangeslider-start/) | [Demo Steps](../demos/custom-scalerangeslider-start/STEPS.md) | [ScaleRangeSlider Doc](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html)
 
 ---
 
-# Act II: Views Recap
+# Part II: Views Recap
 
 What have we learned about Widget Views?
 
@@ -429,21 +423,22 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- NEXT ACT  A -->
-<h1>End Act II</h1>
+<!-- NEXT PART  A -->
+<h1>End Part II</h1>
 
-TODO: img
+<!-- TODO: img -->
 
-<!-- .slide: data-background="" data-background-size="cover"  -->
+<!-- NEXT Part  A -->
+<h1>End Part II</h1>
 
 ---
 
 <!-- Presenter: Franco -->
 
-<!-- NEXT ACT  B -->
-<h1>Act III</h1>
+<!-- NEXT PART  B -->
+<h1>Part III</h1>
 
-TODO: img
+<!-- TODO: img -->
 
 <h2>Extending a View</h2>
 
@@ -451,7 +446,7 @@ TODO: img
 
 ---
 
-# Act III: Extending
+# Part III: Extending
 
 - Why? <!-- .element: class="fragment" data-fragment-index="1" -->
   - Reusable <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -464,23 +459,14 @@ TODO: img
 
 <!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
 
-**CustomCompass (Revisited)**
+**CustomScaleRangeSlider (Revisited)**
 
-[Steps](../demos/custom-compass-extended-start/STEPS.md)
-
----
-
-**CustomBasemapGallery**
-
-[Demo](../demos/custom-basemap-gallery-complete/)
-|
-[Steps](../demos/custom-basemap-gallery-start/STEPS.md)
-
-<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
+[Demo](../demos/custom-scalerangeslider-extended-complete/)
+[Steps](../demos/custom-scalerangeslider-extended-start/STEPS.md)
 
 ---
 
-# Act III: Extending a View Recap
+# Part III: Extending a View Recap
 
 - Reusable <!-- .element: class="fragment" data-fragment-index="1" -->
   - View/ViewModel <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -492,19 +478,19 @@ TODO: img
 
 ---
 
-<!-- NEXT ACT A -->
-<h1>End Act III</h1>
+<!-- NEXT PART A -->
+<h1>End Part III</h1>
 
-TODO: img
+<!-- TODO: img -->
 
 <!-- .slide: data-background="" data-background-size="cover"  -->
 
 ---
 
-<!-- NEXT ACT B -->
+<!-- NEXT PART B -->
 <h1>The End?</h1>
 
-TODO: img
+<!-- TODO: img -->
 
 <!-- .slide: data-background="" data-background-size="cover"  -->
 
@@ -518,13 +504,15 @@ TODO: img
 
 ---
 
-## Recommended Sessions
+## You might also be interested in...
 
-- [Intro to TypeScript](https://devsummit2020.schedule.esri.com/schedule/996246169) Wed 1:30pm
-- [JavaScript for Geographers](https://devsummit2020.schedule.esri.com/schedule/237520120) Wed 2:30 pm
-- [Using TypeScript with ArcGIS API for JavaScript](https://devsummit2020.schedule.esri.com/schedule/1194566856) Wed 2:30 pm
-- [Accessible Web Mapping Apps](https://devsummit2020.schedule.esri.com/schedule/672667633) Thu 9am
-- [Building Your own Widget with ArcGIS API for JavaScript](https://devsummit2020.schedule.esri.com/schedule/822290096) Thu 4pm
+- [ArcGIS API for JavaScript: Getting Started with Web Development](https://developersummit2020.schedule.esri.com/schedule/83220881)
+- [ArcGIS API for JavaScript: 2D Visualization](https://developersummit2020.schedule.esri.com/schedule/417571523)
+- [ArcGIS API for JavaScript: Using TypeScript](https://developersummit2020.schedule.esri.com/schedule/296900293)
+- [ArcGIS API for JavaScript: Tips and Tricks for Developing and Debugging Apps](https://developersummit2020.schedule.esri.com/schedule/503089196)
+- [Building Light-Weight Map Authoring Web Apps](https://developersummit2020.schedule.esri.com/schedule/2102201840)
+- [ArcGIS API for JavaScript: Building Your Own Widget](https://developersummit2020.schedule.esri.com/schedule/1996464916)
+- [Building Web Apps Using Your GeoJSON Data](https://developersummit2020.schedule.esri.com/schedule/172637542)
 
 ---
 
@@ -533,7 +521,8 @@ TODO: img
 - [Implementing Accessor](https://developers.arcgis.com/javascript/latest/guide/implementing-accessor/index.html)
 - [Setting up TypeScript](https://developers.arcgis.com/javascript/latest/guide/typescript-setup/index.html)
 - [Widget Development](https://developers.arcgis.com/javascript/latest/guide/custom-widget/index.html)
-- [JS API SDK](https://developers.arcgis.com/javascript/)
+- [Styling](https://developers.arcgis.com/javascript/latest/guide/styling/)
+- [ArcGIS API for JavaScript - next](https://github.com/Esri/feedback-js-api-next)
 
 ---
 
@@ -546,13 +535,9 @@ TODO: img
 
 ##### For example
 
-> todo
-
-&nbsp;
-
 > 🤔 Where can I find the slides/source?
 
-👉 [bit.ly/todo](http://bit.ly/todo) 👈
+👉 [bit.ly/customwidgetsds20](http://bit.ly/customwidgetsds20) 👈
 
 ---
 
