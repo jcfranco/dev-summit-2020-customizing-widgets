@@ -17,6 +17,16 @@
         height: 100%;
         width: 100%;
       }
+      .esri-scale-range-slider {
+        box-sizing: border-box;
+        padding: 20px;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        margin-left: -155px;
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
     </style>
 
     <script>
@@ -26,14 +36,17 @@
         FeatureLayer,
         ScaleRangeSlider
       ) {
-        const map = new Map({
-          basemap: "dark-gray"
+        const layer = new FeatureLayer({
+          portalItem: {
+            id: "f9e348953b3848ec8b69964d5bceae02"
+          },
+          outFields: ["SEASON"]
         });
 
-        var featureLayer = new FeatureLayer({
-          url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Landscape_Trees/FeatureServer/0"
+        const map = new Map({
+          basemap: "gray-vector",
+          layers: [layer]
         });
-        map.add(featureLayer);
 
         const view = new MapView({
           container: "viewDiv",
@@ -44,14 +57,14 @@
 
         const scaleRangeSlider = new ScaleRangeSlider({
           view: view,
-          layer: featureLayer,
+          layer: layer,
           region: "us" // preview thumbnail will be of US
         });
-        view.ui.add(scaleRangeSlider, "bottom-left");
+        view.ui.add(scaleRangeSlider, "manual");
 
         // to update the layer min/max scale based on the slider
         scaleRangeSlider.watch(["minScale", "maxScale"], function(value, oldValue, name) {
-          featureLayer[name] = value;
+          layer[name] = value;
         });
       });
     </script>

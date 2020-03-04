@@ -6,8 +6,8 @@
     <title>Themes</title>
 
     <!-- Chance the path to the theme you want to use -->
-    <link id="themeLink" rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/light/main.css" />
-    <!-- <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/your-theme-name/main.css"> -->
+    <link id="themeLink" rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/light/main.css" />
+    <!-- <link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/your-theme-name/main.css"> -->
 
     <style>
       html,
@@ -20,7 +20,7 @@
       }
     </style>
 
-    <script src="https://js.arcgis.com/4.11"></script>
+    <script src="https://js.arcgis.com/4.14"></script>
     <script type="text/javascript">
       var map, view, featureLayer, popup, features, dcFL, ripple, tabHandler;
 
@@ -85,7 +85,7 @@
         view.ui.add(selectMenuNode, "top-left");
         selectMenuNode.onchange = function() {
           var themeLinkNode = document.getElementById("themeLink");
-          themeLinkNode.href = "https://js.arcgis.com/4.11/esri/themes/" + selectMenuNode.value + "/main.css";
+          themeLinkNode.href = "https://js.arcgis.com/4.14/esri/themes/" + selectMenuNode.value + "/main.css";
         };
         themes.forEach(function(theme) {
           var optionNode = document.createElement("option");
