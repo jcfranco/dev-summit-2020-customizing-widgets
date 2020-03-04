@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Copyright (c) 2018 Environmental Systems Research Institute, Inc.
+<!-- Copyright (c) 2020 Environmental Systems Research Institute, Inc.
      Apache-2.0 -->
 <html>
 <head>
@@ -20,7 +20,7 @@
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../node_modules/esri-reveal.js-templates/css/print/pdf.css' : '../node_modules/esri-reveal.js-templates/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
 </head>
@@ -37,7 +37,6 @@
     </div>
   </div>
 
-  <script src="../node_modules/esri-reveal.js-templates/lib/js/head.min.js"></script>
   <script src="../node_modules/esri-reveal.js-templates/js/reveal.js"></script>
 
   <script>
