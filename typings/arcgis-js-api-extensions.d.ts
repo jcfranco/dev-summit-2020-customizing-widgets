@@ -1,18 +1,11 @@
 declare namespace __esri {
-
-  export interface Axes {
-    x: number;
-    y: number;
-    z: number;
+  interface scalePreviewUtils {
+    getScalePreviewSpriteBackgroundPosition(index: number): string;
+    getScalePreviewSource(region: string): string;
   }
-
-  export interface WidgetInterfaces {
-    foo: Axes;
-  }
-
 }
 
-declare module "esri/widgets/interfaces" {
-  import WidgetInterfaces = __esri.WidgetInterfaces;
-  export = WidgetInterfaces;
+declare module "esri/widgets/ScaleRangeSlider/scalePreviewUtils" {
+  const scalePreviewUtils: __esri.scalePreviewUtils;
+  export = scalePreviewUtils;
 }
