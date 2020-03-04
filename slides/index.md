@@ -11,12 +11,6 @@
 
 # Agenda
 
-<!-- TODO: THEME -->
-
----
-
-# Agenda
-
 - What can be customized
 - Customization approaches with demos
 - Q & A
@@ -43,19 +37,13 @@
 
 ---
 
-<!-- TODO: THEME CONTINUE -->
-
----
-
 <!-- Presenter: Matt -->
 
 <h1>Part I</h1>
 
-<!-- TODO: img --> 
-
 <h2>Theming</h2>
 
-<!-- .slide: data-background="" data-background-size="cover"  -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-3.png" data-background-size="cover"  -->
 
 ---
 
@@ -79,12 +67,12 @@
 Using a theme requires only a slight update to the CSS path.
 
 ```html
-<link rel="stylesheet" href="https://js.arcgis.com/<version>/esri/themes/<theme-name>/main.css">
+<link rel="stylesheet" href="https://js.arcgis.com/<version>/esri/themes/<theme-name>/main.css" />
 ```
 
 ---
 
-<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-4.png" data-background-size="cover"  -->
 
 **Theme Switcher**
 
@@ -261,13 +249,11 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 # Part I: Lets make a theme
 
-<!-- TODO: theme -->
-
-[![Custom Theme](./img/custom-theme.png)](../demos/custom-theme/)
+[![Custom Theme](http://placekitten.com/200/300)](../demos/custom-theme/)
 
 ---
 
-<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-4.png" data-background-size="cover" -->
 
 **Custom Theme**
 
@@ -289,20 +275,16 @@ $button-color--hover: darken($button-color, 10%) !default;
 <!-- NEXT PART  A -->
 <h1>End Part I</h1>
 
-<!-- TODO: img -->
-
-<!-- .slide: data-background="" data-background-size="cover"  -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-3.png" data-background-size="cover"  -->
 
 ---
 
 <!-- NEXT PART  B -->
 <h1>Part II</h1>
 
-<!-- TODO: img -->
-
 <h2>Views</h2>
 
-<!-- .slide: data-background="" data-background-size="cover"  -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-3.png" data-background-size="cover"  -->
 
 ---
 
@@ -386,7 +368,7 @@ API Exploration
 
 Custom ScaleRangeSlider
 
-[![Custom ScaleRangeSlider](./img/custom-scalerangeslider.png)](../demos/custom-scalerangeslider-complete/)
+[![Custom ScaleRangeSlider](http://placekitten.com/200/300)](../demos/custom-scalerangeslider-complete/)
 
 ---
 
@@ -402,7 +384,7 @@ interface ScaleRangeSlider {
 
 ---
 
-<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-4.png" data-background-size="cover" -->
 
 Recreating a view
 
@@ -426,11 +408,6 @@ What have we learned about Widget Views?
 <!-- NEXT PART  A -->
 <h1>End Part II</h1>
 
-<!-- TODO: img -->
-
-<!-- NEXT Part  A -->
-<h1>End Part II</h1>
-
 ---
 
 <!-- Presenter: Franco -->
@@ -438,11 +415,9 @@ What have we learned about Widget Views?
 <!-- NEXT PART  B -->
 <h1>Part III</h1>
 
-<!-- TODO: img -->
-
 <h2>Extending a View</h2>
 
-<!-- .slide: data-background="" data-background-size="cover"  -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-3.png" data-background-size="cover"  -->
 
 ---
 
@@ -457,7 +432,7 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- .slide: data-background="" data-background-size="cover" style="padding-top: 35%;" -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-4.png" data-background-size="cover"  -->
 
 **CustomScaleRangeSlider (Revisited)**
 
@@ -481,18 +456,14 @@ What have we learned about Widget Views?
 <!-- NEXT PART A -->
 <h1>End Part III</h1>
 
-<!-- TODO: img -->
-
-<!-- .slide: data-background="" data-background-size="cover"  -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-3.png" data-background-size="cover"  -->
 
 ---
 
 <!-- NEXT PART B -->
 <h1>The End?</h1>
 
-<!-- TODO: img -->
-
-<!-- .slide: data-background="" data-background-size="cover"  -->
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-3.png" data-background-size="cover"  -->
 
 ---
 
@@ -541,4 +512,6 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-esri.png" data-background-size="cover" -->
+![Esri](../node_modules/esri-reveal.js-templates/img/esri-science-logo-white.png)
+
+<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-2.png" data-background-size="cover" -->
