@@ -27,10 +27,7 @@ import ScaleRangeSliderViewModel = require("esri/widgets/ScaleRangeSlider/ScaleR
 import { renderable, tsx } from "esri/widgets/support/widget";
 
 const CSS = {
-  base: "esri-scale-range-slider",
-
-  // common
-  widget: "esri-widget"
+  base: "custom-scale-range"
 };
 
 @subclass("demo.CustomScaleRange")
@@ -73,6 +70,14 @@ class CustomScaleRange extends declared(Widget) {
   layer: Layer = null;
 
   //----------------------------------
+  //  rangeType
+  //----------------------------------
+
+  @property()
+  @renderable()
+  rangeType: "to" | "from" = "from";
+
+  //----------------------------------
   //  region
   //----------------------------------
 
@@ -106,6 +111,7 @@ class CustomScaleRange extends declared(Widget) {
   renderThumbnail(index: number) {
     const {
       region,
+      rangeType,
       viewModel: { scaleRanges }
     } = this;
 
@@ -127,8 +133,13 @@ class CustomScaleRange extends declared(Widget) {
           styles={thumbnailStyles}
           bind={this}
           onclick={() => {
-            console.log(scale);
-            this.viewModel.minScale = scale;
+            console.log({ rangeType, scale, label });
+            if (rangeType === "to") {
+              this.viewModel.minScale = scale;
+            } else {
+              this.viewModel.maxScale = scale;
+              this.viewModel.maxScale = scale;
+            }
           }}
         >
           <div>{label}</div>
@@ -147,7 +158,9 @@ class CustomScaleRange extends declared(Widget) {
     let i: number;
 
     for (i = 0; i < (scaleRanges as any).length; i++) {
-      thumbnails.push(this.renderThumbnail(i));
+      if (i === 0 || i % 2 === 0) {
+        thumbnails.push(this.renderThumbnail(i));
+      }
     }
 
     return thumbnails;
@@ -161,11 +174,7 @@ class CustomScaleRange extends declared(Widget) {
 
     const thumbnailList = <ul>{this.renderThumbnailList()}</ul>;
 
-    return (
-      <div class={this.classes(CSS.base, CSS.widget)}>
-        {state === "ready" && view ? thumbnailList : null}
-      </div>
-    );
+    return <div class={CSS.base}>{state === "ready" && view ? thumbnailList : null}</div>;
   }
 
   //--------------------------------------------------------------------------

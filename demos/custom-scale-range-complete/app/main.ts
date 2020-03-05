@@ -36,4 +36,4 @@ const widget = new CustomScaleRange({
   region: "us"
 });
 
-view.ui.add(widget, "top-right");
+view.ui.add(widget, "manual");
