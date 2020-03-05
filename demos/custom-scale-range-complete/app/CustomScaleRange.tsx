@@ -33,7 +33,7 @@ const CSS = {
   widget: "esri-widget"
 };
 
-@subclass("app.CustomScaleRange")
+@subclass("demo.CustomScaleRange")
 class CustomScaleRange extends declared(Widget) {
   //--------------------------------------------------------------------------
   //
@@ -41,13 +41,6 @@ class CustomScaleRange extends declared(Widget) {
   //
   //--------------------------------------------------------------------------
 
-  /**
-   * @constructor
-   * @alias module:esri/widgets/ScaleRangeSlider
-   * @extends module:esri/widgets/Widget
-   * @param {Object} [properties] - See the [properties](#properties-summary) for a list of all the properties
-   *                              that may be passed into the constructor.
-   */
   constructor(params?: {}) {
     super(params);
   }
@@ -74,14 +67,6 @@ class CustomScaleRange extends declared(Widget) {
   //  layer
   //----------------------------------
 
-  /**
-   * When provided, the initial [minScale](#minScale) and [maxScale](#maxScale) values will match the layer's.
-   *
-   * @name layer
-   * @instance
-   * @type {module:esri/layers/Layer}
-   */
-
   @property({
     aliasOf: "viewModel.layer"
   })
@@ -91,17 +76,6 @@ class CustomScaleRange extends declared(Widget) {
   //  region
   //----------------------------------
 
-  /**
-   * The region that the scale thumbnails will focus on.
-   * Each region comes from the [ISO 3166-1 alpha-2 code](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
-   * See [SupportedRegion](#SupportedRegion) for the list of regions that are currently supported.
-   *
-   * @name region
-   * @instance
-   * @type {module:esri/widgets/ScaleRangeSlider~SupportedRegion}
-   * @default "US"
-   */
-
   @property()
   @renderable()
   region: string = "US";
@@ -110,14 +84,6 @@ class CustomScaleRange extends declared(Widget) {
   //  view
   //----------------------------------
 
-  /**
-   * A reference to the {@link module:esri/views/MapView} or {@link module:esri/views/SceneView}.
-   * Set this to link the widget to a specific view.
-   *
-   * @name view
-   * @instance
-   * @type {module:esri/views/MapView | module:esri/views/SceneView}
-   */
   @property({
     aliasOf: "viewModel.view"
   })
@@ -127,17 +93,6 @@ class CustomScaleRange extends declared(Widget) {
   //  viewModel
   //----------------------------------
 
-  /**
-   * The view model for this widget. This is a class that contains all the logic
-   * (properties and methods) that controls this widget's behavior. See the
-   * {@link module:esri/widgets/ScaleRangeSlider/ScaleRangeSliderViewModel} class to access
-   * all properties and methods on the widget.
-   *
-   * @name viewModel
-   * @instance
-   * @type {module:esri/widgets/ScaleRangeSlider/ScaleRangeSliderViewModel}
-   * @autocast
-   */
   @property()
   @renderable(["viewModel.state", "viewModel.scaleRanges", "viewModel.scaleRanges.length"])
   viewModel: ScaleRangeSliderViewModel = new ScaleRangeSliderViewModel();
