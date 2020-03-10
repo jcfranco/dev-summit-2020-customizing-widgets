@@ -4,7 +4,9 @@
   left: 0;
   right: 0;
   z-index: 1;
-  width: 100%;
+  width: 80%;
+  margin: 0 10%;
+  border: 1px solid #fff;
 }
 
 .custom-scale-range__tab-list,
@@ -18,11 +20,11 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+  border-bottom: 4px solid #fff;
 }
 
 .custom-scale-range__tab-item {
   margin: 0;
-  padding: 2px;
   display: flex;
   width: 50%;
 }
@@ -42,13 +44,15 @@
   cursor: pointer;
 }
 
-.custom-scale-range__tab-button--active {
-  background-color: blue;
-}
-
 .custom-scale-range__tab-button:hover,
 .custom-scale-range__tab-button:focus {
   color: #ccc;
+}
+
+.custom-scale-range__tab-button--active,
+.custom-scale-range__tab-button--active:hover {
+  background-color: white;
+  color: #000;
 }
 
 .custom-scale-range__scale-list {
@@ -58,7 +62,6 @@
 }
 
 .custom-scale-range__scale-item {
-  margin: 0 2px;
   padding: 0;
   display: flex;
   width: 10%;
@@ -85,6 +88,7 @@
 
 .custom-scale-range__scale-button--active {
   filter: contrast(125%);
+  border: 3px solid #fff;
 }
 
 .custom-scale-range__scale-label {
@@ -93,7 +97,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.85);
   padding: 5px;
-  font-size: 11px;
+  font-size: 10px;
   width: 100%;
   color: #fff;
 }
