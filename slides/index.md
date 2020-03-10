@@ -497,16 +497,7 @@ What have we learned about Widget Views?
 
 ---
 
-<!-- **please rate us** -->
-<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-rating.png" data-background-size="cover" -->
-
----
-
-# Questions?
-
-##### For example
-
-> 🤔 Where can I find the slides/source?
+# 🤔 Where can I find the slides/source?
 
 👉 [bit.ly/customwidgetsds20](http://bit.ly/customwidgetsds20) 👈
 
