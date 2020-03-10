@@ -19,7 +19,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/core/tsSupport/decorateHelper", "esri/core/accessorSupport/decorators", "esri/widgets/support/widget", "esri/core/watchUtils", "esri/widgets/ScaleRangeSlider"], function (require, exports, __extends, __decorate, decorators_1, widget_1, watchUtils_1, ScaleRangeSlider) {
+define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/core/tsSupport/decorateHelper", "esri/core/accessorSupport/decorators", "esri/widgets/support/widget", "esri/widgets/ScaleRangeSlider", "esri/core/watchUtils"], function (require, exports, __extends, __decorate, decorators_1, widget_1, ScaleRangeSlider, watchUtils_1) {
     "use strict";
     var CSS = {
         scaleIndicatorIcon: "esri-scale-range-slider__scale-indicator-icon custom-scale-range-slider__scale-indicator-icon"

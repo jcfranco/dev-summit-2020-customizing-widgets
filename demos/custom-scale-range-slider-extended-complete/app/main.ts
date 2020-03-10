@@ -12,7 +12,7 @@ const layer = new FeatureLayer({
 });
 
 var map = new Map({
-  basemap: "topo",
+  basemap: "gray",
   layers: [layer]
 });
 

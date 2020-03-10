@@ -8,7 +8,7 @@ define(["require", "exports", "esri/views/MapView", "esri/Map", "./CustomScaleRa
         url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Landscape_Trees/FeatureServer/0"
     });
     var map = new Map({
-        basemap: "topo",
+        basemap: "gray",
         layers: [layer]
     });
     var view = new MapView({
