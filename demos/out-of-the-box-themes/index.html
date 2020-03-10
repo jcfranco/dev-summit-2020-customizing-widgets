@@ -6,8 +6,8 @@
     <title>Themes</title>
 
     <!-- Chance the path to the theme you want to use -->
-    <link id="themeLink" rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/light/main.css" />
-    <!-- <link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/your-theme-name/main.css"> -->
+    <link id="themeLink" rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css" />
+    <!-- <link rel="stylesheet" href="<path to your theme>/your-theme-name/main.css"> -->
 
     <style>
       html,
@@ -20,7 +20,7 @@
       }
     </style>
 
-    <script src="https://js.arcgis.com/4.14"></script>
+    <script src="https://js.arcgis.com/4.15"></script>
     <script type="text/javascript">
       var map, view, featureLayer, popup, features, dcFL, ripple, tabHandler;
 
@@ -37,8 +37,8 @@
         "esri/widgets/Compass",
         "esri/widgets/Home",
         "esri/widgets/BasemapGallery",
+        "esri/widgets/Legend",
         "esri/widgets/Search",
-        "esri/widgets/ColorPicker",
         "esri/widgets/Expand",
         "dojo/dom-construct",
         "dojo/domReady!"
@@ -55,10 +55,9 @@
         Compass,
         Home,
         BasemapGallery,
+        Legend,
         Search,
-        ColorPicker,
-        Expand,
-        domConstruct
+        Expand
       ) {
         // Create the map
         map = new WebScene({ portalItem: { id: "2b721b9e7bef45e2b7ff78a398a33acc" } });
@@ -120,23 +119,13 @@
           content: bmg
         });
 
-        var home = new Home({
-          viewModel: {
-            view: view
-          }
+        var legend = new Legend({
+          view: view
         });
 
-        var compass = new Compass({
-          viewModel: {
-            view: view
-          }
-        });
-
-        var colorPicker = new ColorPicker();
-
-        view.ui.add([search], "top-right");
-        view.ui.add([bmg_expand], "bottom-left");
-        view.ui.add([colorPicker], "bottom-right");
+        view.ui.add(search, "top-right");
+        view.ui.add(bmg_expand, "bottom-left");
+        view.ui.add(legend, "bottom-right");
 
         // Widgets
         //////////////////////////////////////////
