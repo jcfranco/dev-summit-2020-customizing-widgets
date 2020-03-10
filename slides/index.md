@@ -62,7 +62,7 @@
 
 # Esri Themes
 
-10 themes are provided out-of-the-box:
+10 themes are provided **out-of-the-box**:
 
 Using a theme requires only a slight update to the CSS path.
 
@@ -124,8 +124,8 @@ We use
 
 1.  Clone the utility `jsapi-styles.git`
 1.  Run `npm install`
-1.  Edit <span style="font-weight:bold;">`sass/my-theme/main.scss`</span>.
-1.  See <span style="font-weight:bold;">`dist/my-theme/main.css`</span>.
+1.  Edit <span style="font-weight:bold;">`sass/my-theme/main.scss`</span>
+1.  See <span style="font-weight:bold;">`dist/my-theme/main.css`</span>
 
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -161,6 +161,8 @@ Edit your theme.<br/>
 `sass/my-theme/main.scss`
 
 <div>
+
+<!-- intentional space after <div> above (for markdown rendering) -->
 Optionally, edit your app.<br/>
 `preview/index.html`
 </div><!-- .element: class="fragment" data-fragment-index="1" -->
@@ -247,7 +249,7 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 ---
 
-# Part I: Lets make a theme
+# Part I: Let's make a theme
 
 [![Custom Theme](http://placekitten.com/200/300)](../demos/custom-theme/)
 
@@ -318,7 +320,7 @@ Widgets are composed of Views & ViewModels
 - Presentation of the Widget
 - Uses ViewModel APIs to render the UI
 - View-specific logic resides here
-- Extends `esri/widgets/Widget`
+- Extend `esri/widgets/Widget`
 
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -337,10 +339,10 @@ Widgets are composed of Views & ViewModels
 
 # Part II: Widget Lifecycle
 
-- <!-- .element: class="fragment" data-fragment-index="1" --> `constructor`
-- <!-- .element: class="fragment" data-fragment-index="2" --> `postInitialize`
-- <!-- .element: class="fragment" data-fragment-index="3" --> `render`
-- <!-- .element: class="fragment" data-fragment-index="4" --> `destroy`
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --> `constructor`
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --> `postInitialize`
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" --> `render`
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" --> `destroy`
 
 ---
 
@@ -427,7 +429,7 @@ What have we learned about Widget Views?
   - Reusable <!-- .element: class="fragment" data-fragment-index="2" -->
   - Same ecosystem <!-- .element: class="fragment" data-fragment-index="3" -->
 - How? <!-- .element: class="fragment" data-fragment-index="4" -->
-  - <!-- .element: class="fragment" data-fragment-index="5" --> Leveraging `esri/widgets/Widget`
+  - &shy;<!-- .element: class="fragment" data-fragment-index="5" --> Leveraging `esri/widgets/Widget`
   - API Widgets <!-- .element: class="fragment" data-fragment-index="6" -->
 
 ---
@@ -455,13 +457,6 @@ What have we learned about Widget Views?
 
 <!-- NEXT PART A -->
 <h1>End Part III</h1>
-
-<!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-3.png" data-background-size="cover"  -->
-
----
-
-<!-- NEXT PART B -->
-<h1>The End?</h1>
 
 <!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-3.png" data-background-size="cover"  -->
 
