@@ -1,5 +1,5 @@
 <!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-1.png" data-background-size="cover" -->
-<!-- Presenter: Franco -->
+<!-- Presenter: Matt -->
 
 # ArcGIS API for JavaScript: Customizing Widgets
 
@@ -37,7 +37,7 @@
 
 ---
 
-<!-- Presenter: Matt -->
+<!-- Presenter: Franco -->
 
 <h1>Part I</h1>
 
@@ -290,6 +290,8 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 ---
 
+<!-- Presenter: Matt -->
+
 # Part II: Widget Composition
 
 Widgets are composed of Views & ViewModels
@@ -438,8 +440,10 @@ What have we learned about Widget Views?
 
 **CustomScaleRangeSlider (Revisited)**
 
-[Demo](../demos/custom-scalerangeslider-extended-complete/)
-[Steps](../demos/custom-scalerangeslider-extended-start/STEPS.md)
+[Demo](../demos/custom-scale-range-slider-extended-complete/) |
+[Steps](../demos/custom-scale-range-slider-extended-start/STEPS.md)
+
+<img src="./img/custom-scale-range-slider-extended.png" height=600 />
 
 ---
 
