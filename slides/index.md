@@ -478,18 +478,6 @@ What have we learned about Widget Views?
 
 ---
 
-## You might also be interested in...
-
-- [ArcGIS API for JavaScript: Getting Started with Web Development](https://developersummit2020.schedule.esri.com/schedule/83220881)
-- [ArcGIS API for JavaScript: 2D Visualization](https://developersummit2020.schedule.esri.com/schedule/417571523)
-- [ArcGIS API for JavaScript: Using TypeScript](https://developersummit2020.schedule.esri.com/schedule/296900293)
-- [ArcGIS API for JavaScript: Tips and Tricks for Developing and Debugging Apps](https://developersummit2020.schedule.esri.com/schedule/503089196)
-- [Building Light-Weight Map Authoring Web Apps](https://developersummit2020.schedule.esri.com/schedule/2102201840)
-- [ArcGIS API for JavaScript: Building Your Own Widget](https://developersummit2020.schedule.esri.com/schedule/1996464916)
-- [Building Web Apps Using Your GeoJSON Data](https://developersummit2020.schedule.esri.com/schedule/172637542)
-
----
-
 ## Additional Resources
 
 - [Implementing Accessor](https://developers.arcgis.com/javascript/latest/guide/implementing-accessor/index.html)
@@ -497,6 +485,16 @@ What have we learned about Widget Views?
 - [Widget Development](https://developers.arcgis.com/javascript/latest/guide/custom-widget/index.html)
 - [Styling](https://developers.arcgis.com/javascript/latest/guide/styling/)
 - [ArcGIS API for JavaScript - next](https://github.com/Esri/feedback-js-api-next)
+
+---
+
+## You might also be interested in...
+
+- ArcGIS API for JavaScript: Getting Started with Web Development
+- ArcGIS API for JavaScript: Using TypeScript
+- ArcGIS API for JavaScript: Tips and Tricks for Developing and Debugging Apps
+- Building Light-Weight Map Authoring Web Apps
+- ArcGIS API for JavaScript: Building Your Own Widget
 
 ---
 
