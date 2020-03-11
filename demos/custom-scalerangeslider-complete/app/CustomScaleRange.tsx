@@ -142,12 +142,14 @@ class CustomScaleRange extends declared(Widget) {
     const label = i18n.scaleRangeLabels[scaleRanges.findScaleRangeByIndex(index).id];
     const scale = viewModel.mapSliderToScale(index);
     const currentScale = rangeType === "to" ? maxScale : minScale;
+    const isWorldScale = rangeType === "from" && currentScale === 0 && index === 0;
+
     return (
       <li key={`thumbnail-${index}`} class={CSS.scaleItem}>
         <button
           class={this.classes(
             CSS.scaleButton,
-            ((index === 0 && currentScale === 0) || currentScale === scale) && CSS.scaleButtonActive
+            (isWorldScale || currentScale === scale) && CSS.scaleButtonActive
           )}
           styles={thumbnailStyles}
           bind={this}
