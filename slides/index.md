@@ -374,7 +374,7 @@ API Exploration
 
 Custom ScaleRangeSlider
 
-[![Custom ScaleRangeSlider](http://placekitten.com/200/300)](../demos/custom-scalerangeslider-complete/)
+[![Custom ScaleRangeSlider](./img/custom-scalerangeslider.png)](../demos/custom-scalerangeslider-complete/)
 
 ---
 
