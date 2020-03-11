@@ -1,12 +1,14 @@
 # Custom View Demo: Steps
 
-1. view HTML
-2. View `app/main.ts`
-3. view `app/CustomScaleRangeSlider.tsx`
+## Look over
 
-## Setup properties of view
+1. `index.html`
+2. `app/main.ts`
+3. `app/CustomScaleRangeSlider.tsx`
 
-### Layer Property
+## Setup properties of custom view
+
+### Add `layer` Property
 
 ```ts
 //----------------------------------
@@ -48,7 +50,7 @@ region: string = "US";
 type RangeType = "from" | "to";
 ```
 
-### Add view and viewModel props
+### Add `view` and `viewModel` properties
 
 ```ts
 //----------------------------------
@@ -89,26 +91,13 @@ import ScaleRangeSliderViewModel = require("esri/widgets/ScaleRangeSlider/ScaleR
 
 View console and inspect widget object.
 
-## Add postinitialize watchers
-
-```ts
-postInitialize(): void {
-    this.own([
-      watchUtils.init(this, "viewModel.minScale", (value) => {
-        this.viewModel.layer["minScale"] = value;
-      }),
-      watchUtils.init(this, "viewModel.maxScale", (value) => {
-        this.viewModel.layer["maxScale"] = value;
-      })
-    ]);
-  }
-```
-
 ## Rendering
 
-Now we can start rendering our widget.
+Now we can start rendering our widget~
 
-### Lets add classes to use
+### Lets add CSS classes to use
+
+The CSS has already been setup, we can just have a map of our classes.
 
 ```ts
 const CSS = {
@@ -125,7 +114,9 @@ const CSS = {
 };
 ```
 
-### modify render method
+### Modify `render()` method
+
+Lets setup our widget to have two lists.
 
 ```tsx
 const {
@@ -150,7 +141,7 @@ const content = state === "ready" && view ? [tabsContainer, thumbnailList] : nul
 return <div class={CSS.base}>{content}</div>;
 ```
 
-### Add empty methods
+### Add empty methods for seperate lists
 
 ```tsx
 protected renderTabs() {}
@@ -158,6 +149,8 @@ protected renderThumbnailList() {}
 ```
 
 ## Lets build the tabs for `To` and `From`
+
+We'll start building a tabbed interface.
 
 ### Modify renderTabs method
 
@@ -179,21 +172,28 @@ protected renderTabItem(type: RangeType) {
 protected renderTabButton(type: RangeType) {
   const { rangeType } = this;
 
-  const buttonText = type === "to" ? "To" : "From";
-
   return (
     <button
       class={this.classes(CSS.tabButton, rangeType === type && CSS.tabButtonActive)}
-      bind={this}
-      onclick={() => this._setRangeType(type)}
     >
-      {buttonText}
+      {type}
     </button>
   );
 }
 ```
 
+## Compile
+
+Lets compile and see the tabs.
+
 ### Add private method for onclick
+
+Our button doesn't do anything so lets wire it up!
+
+```
+bind={this}
+onclick={() => this._setRangeType(type)}
+```
 
 ```tsx
 private _setRangeType(type: RangeType) {
@@ -201,7 +201,9 @@ private _setRangeType(type: RangeType) {
 }
 ```
 
-## Compile and see tabs
+## Compile
+
+Lets compile and see the tabs that now work.
 
 ## Modify rendering thumbnails
 
@@ -244,35 +246,22 @@ protected renderThumbnailButton(index: number) {
     viewModel: { maxScale, minScale }
   } = this;
 
-  const thumbnailStyles = {
-    backgroundImage: getScalePreviewSource(region),
-    backgroundPosition: getScalePreviewSpriteBackgroundPosition(index)
-  };
-
   const scale = viewModel.mapSliderToScale(index);
 
   const currentScale = rangeType === "to" ? maxScale : minScale;
-  const isWorldScale = rangeType === "from" && currentScale === 0 && index === 0;
+  const isWorldScale = rangeType === "from" && minScale === 0 && index === 0;
   const isActive = isWorldScale || currentScale === scale;
 
   return (
     <button
       class={this.classes(CSS.scaleButton, isActive && CSS.scaleButtonActive)}
-      styles={thumbnailStyles}
       bind={this}
-      onclick={() => (rangeType === "to" ? this._setScaleTo(scale) : this._setScaleFrom(scale))}
+      onclick={() => console.log(scale)}
     >
       {this.renderThumbnailLabel(index)}
     </button>
   );
 }
-```
-
-```ts
-import {
-  getScalePreviewSource,
-  getScalePreviewSpriteBackgroundPosition
-} from "esri/widgets/ScaleRangeSlider/scalePreviewUtils";
 ```
 
 ```tsx
@@ -292,6 +281,46 @@ protected renderThumbnailLabel(index: number) {
 import i18n = require("dojo/i18n!esri/widgets/ScaleRangeSlider/nls/ScaleRangeSlider");
 ```
 
+## Compile
+
+Lets see the scales.
+
+## Add thumbnails
+
+Lets add background images for our scales using existing utilites.
+
+```ts
+import {
+  getScalePreviewSource,
+  getScalePreviewSpriteBackgroundPosition
+} from "esri/widgets/ScaleRangeSlider/scalePreviewUtils";
+```
+
+Create a styles object
+
+```tsx
+const thumbnailStyles = {
+  backgroundImage: getScalePreviewSource(region),
+  backgroundPosition: getScalePreviewSpriteBackgroundPosition(index)
+};
+```
+
+Add styles to the button.
+
+```
+styles={thumbnailStyles}
+```
+
+## Compile
+
+Lets compile and see the thumbnails.
+
+## Add onclick to make the thumbnails work
+
+```tsx
+onclick={() => (rangeType === "to" ? this._setScaleTo(scale) : this._setScaleFrom(scale))}
+```
+
 ```tsx
 private _setScaleFrom(scale: number): void {
   this.viewModel.minScale = scale;
@@ -300,4 +329,23 @@ private _setScaleFrom(scale: number): void {
 private _setScaleTo(scale: number): void {
   this.viewModel.maxScale = scale;
 }
+```
+
+## Add `postInitialize()` watchers
+
+```ts
+import watchUtils = require("esri/core/watchUtils");
+```
+
+```ts
+postInitialize(): void {
+    this.own([
+      watchUtils.init(this, "viewModel.minScale", (value) => {
+        this.viewModel.layer["minScale"] = value;
+      }),
+      watchUtils.init(this, "viewModel.maxScale", (value) => {
+        this.viewModel.layer["maxScale"] = value;
+      })
+    ]);
+  }
 ```

@@ -153,7 +153,7 @@ class CustomScaleRange extends declared(Widget) {
     const scale = viewModel.mapSliderToScale(index);
 
     const currentScale = rangeType === "to" ? maxScale : minScale;
-    const isWorldScale = rangeType === "from" && currentScale === 0 && index === 0;
+    const isWorldScale = rangeType === "from" && minScale === 0 && index === 0;
     const isActive = isWorldScale || currentScale === scale;
 
     return (
@@ -197,15 +197,13 @@ class CustomScaleRange extends declared(Widget) {
   protected renderTabButton(type: RangeType) {
     const { rangeType } = this;
 
-    const buttonText = type === "to" ? "To" : "From";
-
     return (
       <button
         class={this.classes(CSS.tabButton, rangeType === type && CSS.tabButtonActive)}
         bind={this}
         onclick={() => this._setRangeType(type)}
       >
-        {buttonText}
+        {type}
       </button>
     );
   }
