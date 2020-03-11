@@ -8,8 +8,7 @@ import { on } from "esri/core/watchUtils";
 import Slider = require("esri/widgets/Slider");
 
 const CSS = {
-  scaleIndicatorIcon:
-    "esri-scale-range-slider__scale-indicator-icon custom-scale-range-slider__scale-indicator-icon"
+  scaleIndicatorIcon: "custom-scale-range-slider__scale-indicator-icon"
 };
 
 // use interface merging to access internals

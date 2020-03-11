@@ -48,12 +48,12 @@ protected renderCurrentScaleIndicatorIcon() {
 This method references a CSS lookup object, which we can bring over.
 
 ```tsx
-const CSS = { 
-  scaleIndicatorIcon: "esri-scale-range-slider__scale-indicator-icon" 
+const CSS = {
+  scaleIndicatorIcon: "custom-scale-range-slider__scale-indicator-icon"
 };
 ```
 
-Note that we referenced the original class plus a custom one. 
+Note that we are using a custom CSS class for the icon, discarding the original styling. 
 
 1. We've customized rendering for this widget and we can now preview our changes.  
 

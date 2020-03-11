@@ -22,18 +22,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/core/tsSupport/decorateHelper", "esri/core/accessorSupport/decorators", "esri/widgets/support/widget", "esri/widgets/ScaleRangeSlider", "esri/core/watchUtils"], function (require, exports, __extends, __decorate, decorators_1, widget_1, ScaleRangeSlider, watchUtils_1) {
     "use strict";
     var CSS = {
-        scaleIndicatorIcon: "esri-scale-range-slider__scale-indicator-icon custom-scale-range-slider__scale-indicator-icon"
+        scaleIndicatorIcon: "custom-scale-range-slider__scale-indicator-icon"
     };
     var CustomScaleRangeSlider = /** @class */ (function (_super) {
         __extends(CustomScaleRangeSlider, _super);
+        function CustomScaleRangeSlider() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
         //--------------------------------------------------------------------------
         //
         //  Lifecycle
         //
         //--------------------------------------------------------------------------
-        function CustomScaleRangeSlider(props) {
-            return _super.call(this) || this;
-        }
         CustomScaleRangeSlider.prototype.postInitialize = function () {
             var _this = this;
             ScaleRangeSlider.prototype.postInitialize.call(this);
