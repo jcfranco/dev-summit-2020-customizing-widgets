@@ -3,6 +3,10 @@ declare namespace __esri {
     getScalePreviewSpriteBackgroundPosition(index: number): string;
     getScalePreviewSource(region: string): string;
   }
+
+  interface ScaleRanges {
+    length: number;
+  }
 }
 
 declare module "esri/widgets/ScaleRangeSlider/scalePreviewUtils" {

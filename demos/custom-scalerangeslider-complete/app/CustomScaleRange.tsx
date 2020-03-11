@@ -23,6 +23,7 @@ import {
   getScalePreviewSource,
   getScalePreviewSpriteBackgroundPosition
 } from "esri/widgets/ScaleRangeSlider/scalePreviewUtils";
+
 import ScaleRangeSliderViewModel = require("esri/widgets/ScaleRangeSlider/ScaleRangeSliderViewModel");
 
 // esri.widgets.support
@@ -126,12 +127,22 @@ class CustomScaleRange extends declared(Widget) {
   //
   //--------------------------------------------------------------------------
 
-  renderThumbnail(index: number) {
+  protected renderThumbnailLabel(index: number) {
+    const {
+      viewModel: { scaleRanges }
+    } = this;
+
+    const label = i18n.scaleRangeLabels[scaleRanges.findScaleRangeByIndex(index).id];
+
+    return <div class={CSS.scaleLabel}>{label}</div>;
+  }
+
+  protected renderThumbnailButton(index: number) {
     const {
       region,
       rangeType,
       viewModel,
-      viewModel: { maxScale, minScale, scaleRanges }
+      viewModel: { maxScale, minScale }
     } = this;
 
     const thumbnailStyles = {
@@ -139,39 +150,43 @@ class CustomScaleRange extends declared(Widget) {
       backgroundPosition: getScalePreviewSpriteBackgroundPosition(index)
     };
 
-    const label = i18n.scaleRangeLabels[scaleRanges.findScaleRangeByIndex(index).id];
     const scale = viewModel.mapSliderToScale(index);
+
     const currentScale = rangeType === "to" ? maxScale : minScale;
     const isWorldScale = rangeType === "from" && currentScale === 0 && index === 0;
+    const isActive = isWorldScale || currentScale === scale;
 
     return (
+      <button
+        class={this.classes(CSS.scaleButton, isActive && CSS.scaleButtonActive)}
+        styles={thumbnailStyles}
+        bind={this}
+        onclick={() => (rangeType === "to" ? this._setScaleTo(scale) : this._setScaleFrom(scale))}
+      >
+        {this.renderThumbnailLabel(index)}
+      </button>
+    );
+  }
+
+  protected renderThumbnail(index: number) {
+    return (
       <li key={`thumbnail-${index}`} class={CSS.scaleItem}>
-        <button
-          class={this.classes(
-            CSS.scaleButton,
-            (isWorldScale || currentScale === scale) && CSS.scaleButtonActive
-          )}
-          styles={thumbnailStyles}
-          bind={this}
-          onclick={() => (rangeType === "to" ? this._setScaleTo(scale) : this._setScaleFrom(scale))}
-        >
-          <div class={CSS.scaleLabel}>{label}</div>
-        </button>
+        {this.renderThumbnailButton(index)}
       </li>
     );
   }
 
-  renderThumbnailList() {
+  protected renderThumbnailList() {
     const {
       viewModel: { scaleRanges }
     } = this;
 
     const thumbnails = [];
 
-    let i: number;
+    for (let i = 0; i < scaleRanges.length; i++) {
+      const evenScaleRange = i === 0 || i % 2 === 0;
 
-    for (i = 0; i < (scaleRanges as any).length; i++) {
-      if (i === 0 || i % 2 === 0) {
+      if (evenScaleRange) {
         thumbnails.push(this.renderThumbnail(i));
       }
     }
@@ -179,32 +194,41 @@ class CustomScaleRange extends declared(Widget) {
     return thumbnails;
   }
 
+  protected renderTabButton(type: RangeType) {
+    const { rangeType } = this;
+
+    const buttonText = type === "to" ? "To" : "From";
+
+    return (
+      <button
+        class={this.classes(CSS.tabButton, rangeType === type && CSS.tabButtonActive)}
+        bind={this}
+        onclick={() => this._setRangeType(type)}
+      >
+        {buttonText}
+      </button>
+    );
+  }
+
+  protected renderTabItem(type: RangeType) {
+    return <li class={CSS.tabItem}>{this.renderTabButton(type)}</li>;
+  }
+
+  protected renderTabs() {
+    const rangeTypes: RangeType[] = ["from", "to"];
+
+    return rangeTypes.map((type) => this.renderTabItem(type));
+  }
+
   render() {
     const {
-      rangeType,
       view,
       viewModel: { state }
     } = this;
 
-    const rangeTypes: RangeType[] = ["from", "to"];
-
-    const tabs = rangeTypes.map((type) => {
-      return (
-        <li class={CSS.tabItem}>
-          <button
-            class={this.classes(CSS.tabButton, rangeType === type && CSS.tabButtonActive)}
-            bind={this}
-            onclick={() => this._setRangeType(type)}
-          >
-            {type === "to" ? "To" : "From"}
-          </button>
-        </li>
-      );
-    });
-
     const tabsContainer = (
       <ul key="tab-list" class={CSS.tabList}>
-        {tabs}
+        {this.renderTabs()}
       </ul>
     );
 
@@ -214,11 +238,9 @@ class CustomScaleRange extends declared(Widget) {
       </ol>
     );
 
-    return (
-      <div class={CSS.base}>
-        {state === "ready" && view ? [tabsContainer, thumbnailList] : null}
-      </div>
-    );
+    const content = state === "ready" && view ? [tabsContainer, thumbnailList] : null;
+
+    return <div class={CSS.base}>{content}</div>;
   }
 
   //--------------------------------------------------------------------------

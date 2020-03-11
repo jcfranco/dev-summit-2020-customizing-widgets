@@ -7,7 +7,8 @@ import { declared, subclass } from "esri/core/accessorSupport/decorators";
 // esri.widgets
 import Widget = require("esri/widgets/Widget");
 
-const CSS = {};
+// esri.widgets.support
+import { tsx } from "esri/widgets/support/widget";
 
 @subclass("demo.CustomScaleRange")
 class CustomScaleRange extends declared(Widget) {
@@ -33,7 +34,10 @@ class CustomScaleRange extends declared(Widget) {
   //
   //--------------------------------------------------------------------------
 
-  render() {}
+  render() {
+    console.log(this);
+    return <div />;
+  }
 
   //--------------------------------------------------------------------------
   //
