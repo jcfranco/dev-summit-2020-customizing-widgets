@@ -163,8 +163,10 @@ Edit your theme.<br/>
 <div>
 
 <!-- intentional space after <div> above (for markdown rendering) -->
+
 Optionally, edit your app.<br/>
 `preview/index.html`
+
 </div><!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
@@ -376,13 +378,15 @@ Custom ScaleRangeSlider
 
 ---
 
-# Part II: ScaleRangeSlider Interface
-
-`CustomScaleRangeSlider` widget: Same interface as the default `ScaleRangeSlider` widget
+# Part II: CustomScaleRangeSlider Interface
 
 ```ts
-interface ScaleRangeSlider {
-  // tbd 🚧
+interface CustomScaleRangeSlider {
+  layer: Layer; // aliased
+  rangeType: "to" | "from";
+  region: string; // will use to get thumbnails
+  view: MapView | SceneView; // aliased
+  viewModel: ScaleRangeSliderViewModel; // handling logic!
 }
 ```
 
@@ -440,10 +444,10 @@ What have we learned about Widget Views?
 
 **CustomScaleRangeSlider (Revisited)**
 
-[Demo](../demos/custom-scale-range-slider-extended-complete/) |
-[Steps](../demos/custom-scale-range-slider-extended-start/STEPS.md)
+[Demo](../demos/custom-scalerangeslider-extended-complete/) |
+[Steps](../demos/custom-scalerangeslider-extended-start/STEPS.md)
 
-<img src="./img/custom-scale-range-slider-extended.png" height=600 />
+<img src="./img/custom-scalerangeslider-extended.png" height=600 />
 
 ---
 
