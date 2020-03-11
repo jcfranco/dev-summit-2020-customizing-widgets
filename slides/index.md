@@ -13,7 +13,6 @@
 
 - What can be customized
 - Customization approaches with demos
-- Q & A
 
 ---
 
@@ -219,7 +218,7 @@ Override the core color variables...
 $font-color: #3a5fe5;
 $interactive-font-color: #ff1515;
 $background-color: #1e0707;
-$button-color: #8070CC;
+$button-color: #8070cc;
 ```
 
 ...then magic!<!-- .element: class="fragment" data-fragment-index="1" -->
@@ -249,8 +248,8 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 **Custom Theme**
 
-
 <!-- preview page requires utility to be running -->
+
 [Preview](http://localhost:3001/preview/) | [Demo Steps](../demos/custom-theme/STEPS.md)
 
 ---
