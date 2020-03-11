@@ -1,0 +1,17 @@
+@import "CustomScaleRangeSlider.css";
+
+html,
+body,
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+/* manual placement */
+.esri-scale-range-slider {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 25px;
+}

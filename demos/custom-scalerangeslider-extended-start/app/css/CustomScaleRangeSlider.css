@@ -1,0 +1,20 @@
+/* adjust original container position to accommodate new icon */
+.esri-scale-range-slider__scale-indicator-container {
+  left: -6px;
+  right: -32px;
+}
+
+.custom-scale-range-slider__scale-indicator-icon {
+  display: inline-block;
+  font-size: 2em;
+  animation: pointing 0.5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes pointing {
+  from {
+    transform: scale(1) translate(0, 10px);
+  }
+  to {
+    transform: scale(1.25) translate(0, 20px);
+  }
+}

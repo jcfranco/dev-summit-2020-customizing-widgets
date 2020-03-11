@@ -12,7 +12,7 @@ ____________
     - simple app setup
     - imports custom widget
 
-2. Open `CustomScaleRangeSlider.tsx`
+1. Open `CustomScaleRangeSlider.tsx`
     - widget extension boilerplate
 
 ```tsx
@@ -39,14 +39,7 @@ class CustomScaleRangeSlider extends declared(ScaleRangeSlider) {
 export = CustomScaleRangeSlider;
 ```
 
-3. Simply replace `render` with your custom rendering:
-
-```tsx
-const CSS = {
-  scaleIndicatorIcon:
-    "esri-scale-range-slider__scale-indicator-icon custom-scale-range-slider__scale-indicator-icon"
-};
-```
+1. Next up, we'll customize rendering. Namely, the current scale indicator icon. We can do this by simply replacing `render` with our custom render method:
 
 ```tsx
 //--------------------------------------------------------------------------
@@ -60,7 +53,19 @@ protected renderCurrentScaleIndicatorIcon() {
 }
 ```
 
-4. Let's add some custom functionality:
+This method references a CSS lookup object, which we can bring over.
+
+```tsx
+const CSS = { 
+  scaleIndicatorIcon: "esri-scale-range-slider__scale-indicator-icon" 
+};
+```
+
+Note that we referenced the original class plus a custom one. 
+
+1. We've customized rendering for this widget and we can now preview our changes.  
+
+1. Now, we can focus on adding custom functionality. We'll enhance this widget by making it zoom to the min/max scale when a slider thumb is clicked. We'll do this by leveraging the widget lifecycle and using some of the widget internals.  
 
 ```tsx 
 import { on } from "esri/core/watchUtils";
