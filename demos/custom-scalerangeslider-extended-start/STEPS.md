@@ -25,15 +25,7 @@ import ScaleRangeSlider = require("esri/widgets/ScaleRangeSlider");
 
 @subclass("esri.demo.CustomScaleRangeSlider")
 class CustomScaleRangeSlider extends declared(ScaleRangeSlider) {
-  //--------------------------------------------------------------------------
-  //
-  //  Lifecycle
-  //
-  //--------------------------------------------------------------------------
 
-  constructor(props: __esri.ScaleRangeSliderProperties) {
-    super();
-  }
 }
 
 export = CustomScaleRangeSlider;

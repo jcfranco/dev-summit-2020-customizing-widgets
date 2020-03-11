@@ -27,10 +27,6 @@ class CustomScaleRangeSlider extends declared(ScaleRangeSlider) {
   //
   //--------------------------------------------------------------------------
 
-  constructor(props: __esri.ScaleRangeSliderProperties) {
-    super();
-  }
-
   postInitialize(): void {
     ScaleRangeSlider.prototype.postInitialize.call(this);
 

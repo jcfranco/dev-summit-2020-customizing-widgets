@@ -241,7 +241,7 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 # Part I: Let's make a theme
 
-<img src="./img/custom-theme.png" height=500 />
+<img src="./img/custom-theme.png" height=400 />
 
 ---
 
@@ -426,7 +426,7 @@ What have we learned about Widget Views?
   - Same ecosystem <!-- .element: class="fragment" data-fragment-index="3" -->
 - How? <!-- .element: class="fragment" data-fragment-index="4" -->
   - &shy;<!-- .element: class="fragment" data-fragment-index="5" --> Leveraging `esri/widgets/Widget`
-  - API Widgets <!-- .element: class="fragment" data-fragment-index="6" -->
+  - API widget views <!-- .element: class="fragment" data-fragment-index="6" -->
 
 ---
 
@@ -434,12 +434,13 @@ What have we learned about Widget Views?
 
 # Part III: Extending a View
 
-**CustomScaleRangeSlider (Revisited)**
+**CustomScaleRangeSlider (revisited)**
 
-[Demo](../demos/custom-scalerangeslider-extended-complete/) |
+[API Reference](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html) |
+[Demo](../demos/custom-scalerangeslider-extended-start/) |
 [Steps](../demos/custom-scalerangeslider-extended-start/STEPS.md)
 
-<img src="./img/custom-scalerangeslider-extended.png" height=600 />
+<img src="./img/custom-scalerangeslider-extended.png" height=400 />
 
 ---
 
