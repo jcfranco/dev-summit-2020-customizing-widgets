@@ -52,9 +52,8 @@
 ## Why Theme? <!-- .element: class="fragment" data-fragment-index="0" -->
 
 - Match branding.
-- Match the map.
 - Contrast with the map.
-- User-specific (e.g. bigger buttons)
+- User-specific (e.g. bigger buttons).
 
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -115,17 +114,6 @@ We use
 1.  Use the utility.
 1.  Customize your theme.
 1.  Host your CSS file.
-
-<!-- .element: class="fragment" data-fragment-index="1" -->
-
----
-
-# Theming Setup
-
-1.  Clone the utility `jsapi-styles.git`
-1.  Run `npm install`
-1.  Edit <span style="font-weight:bold;">`sass/my-theme/main.scss`</span>
-1.  See <span style="font-weight:bold;">`dist/my-theme/main.css`</span>
 
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -197,9 +185,9 @@ Theme Smart
 
 Let's look at how the core theme is structured
 
-- Color <span>: `color.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
-- Size <span>: `sizes.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
-- Type <span>: `type.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
+- Color <span>: `_color.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
+- Size <span>: `_sizes.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
+- Type <span>: `_type.scss`</span><!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -231,7 +219,7 @@ Override the core color variables...
 $font-color: #3a5fe5;
 $interactive-font-color: #ff1515;
 $background-color: #1e0707;
-$button-color: #ff1515;
+$button-color: #8070CC;
 ```
 
 ...then magic!<!-- .element: class="fragment" data-fragment-index="1" -->
@@ -253,7 +241,7 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 # Part I: Let's make a theme
 
-[![Custom Theme](http://placekitten.com/200/300)](../demos/custom-theme/)
+<img src="./img/custom-theme.png" height=500 />
 
 ---
 
@@ -261,7 +249,9 @@ $button-color--hover: darken($button-color, 10%) !default;
 
 **Custom Theme**
 
-[Preview](../../jsapi-styles/preview/) | [Demo Steps](../demos/custom-theme/STEPS.md)
+
+<!-- preview page requires utility to be running -->
+[Preview](http://localhost:3001/preview/) | [Demo Steps](../demos/custom-theme/STEPS.md)
 
 ---
 
@@ -441,6 +431,8 @@ What have we learned about Widget Views?
 ---
 
 <!-- .slide: data-background="../node_modules/esri-reveal.js-templates/img/2020/devsummit/bg-4.png" data-background-size="cover"  -->
+
+# Part III: Extending a View
 
 **CustomScaleRangeSlider (Revisited)**
 
