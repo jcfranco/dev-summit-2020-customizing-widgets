@@ -44,20 +44,20 @@ Replace the code with the following
 
 ## Uncomment the color var lines to see changes.
 
-## Change Font
-
-```scss
-// Type
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-$font-family: "Lato", sans-serif;
-```
-
 ## Change Font sizing
 
 ```scss
 // Type
 $line-height: 1.3em;
 $base-font-size: 18px;
+```
+
+## Change Font
+
+```scss
+// Type
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+$font-family: "Lato", sans-serif;
 ```
 
 ## Modify Button Sizes

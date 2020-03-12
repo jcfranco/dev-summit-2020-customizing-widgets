@@ -43,4 +43,9 @@ const widget = new CustomScaleRangeSlider({
   layer
 });
 
+widget.watch(
+  ["minScale", "maxScale"],
+  (value: number, oldValue: number, name: string) => (layer[name] = value)
+);
+
 view.ui.add(widget, "manual");
