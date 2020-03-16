@@ -490,9 +490,15 @@ What have we learned about Widget Views?
 
 ---
 
-# 🤔 Where can I find the slides/source?
+# Questions? 🤔 
 
-👉 [bit.ly/customwidgetsds20](http://bit.ly/customwidgetsds20) 👈
+> Where can I find the slides/source?
+
+[bit.ly/buildwidgetsds20](http://bit.ly/buildwidgetsds20) 
+
+> Where can I submit a question? 
+
+[bit.ly/askjsapi](http://bit.ly/askjsapi)
 
 ---
 
